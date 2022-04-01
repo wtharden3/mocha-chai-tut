@@ -1,0 +1,25 @@
+{
+  "name": "mocha-chai-tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtharden3/mocha-chai-tut.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wtharden3/mocha-chai-tut/issues"
+  },
+  "homepage": "https://github.com/wtharden3/mocha-chai-tut#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0"
+  }
+}
