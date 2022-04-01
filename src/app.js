@@ -14,17 +14,26 @@ const getKilograms = (pounds) => {
   return pounds.map(pound => parseFloat((pound/2.2046).toFixed(2)));
 }
 
-const addTwoNums = (num1, num2) => {
+const addTwoNums = (num1 = 0, num2 = 0) => {
   if (num1 === undefined) num1 = 0;
   if (num2 === undefined) num2 = 0;
-  if((Number.isInteger(num1)) || (Number.isInteger(num2))){
+  if((Number.isInteger(num1)) && (Number.isInteger(num2))){
     return num1 + num2;
   } else {
     return `Both these values must be a number`;
   }  
 }
 
+// option 2
+const add = (a,b) => {
+  if(typeof a !== 'number' || typeof b !== 'number'){
+    return 0;
+  } 
+  return a + b;
+}
+
 module.exports = {
   getKilograms,
-  addTwoNums
+  addTwoNums,
+  add
 }

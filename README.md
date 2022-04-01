@@ -4,6 +4,8 @@
 
 run ```npm install``` in your terminal to install dev dependencies
 
+in order to run test statments run ``` npm run test ``` at the root folder
+
 ## Dev Dependences
 * [Mocha](https://mochajs.org/)
 * [Chai](https://www.chaijs.com/)

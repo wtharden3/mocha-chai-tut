@@ -10,16 +10,41 @@ describe('getKilograms', () => { //arrow functions are discouraged - read Mocha 
 })
 
 describe('addTwoNums', () => { //arrow functions are discouraged - read Mocha documnation on this later
-  it('should add two numbers and return the sum of the two numbers', () =>{
+  it('should add two numbers and return the sum of the two numbers', () => {
     const result = addTwoNums(2,2);
     // assert.equal(result, 4); //the expected are integers but the actual are strings
     expect(result).to.be.eq(4);
-    expect(addTwoNums(0,0)).to.be.eq(0);
-    expect(addTwoNums(undefined,0)).to.be.eq(0);
-    expect(addTwoNums(undefined,undefined)).to.be.eq(0);
-    expect(addTwoNums(null,undefined)).to.be.eq(0);
     
+    
+    
+
     // not working
     // expect(addTwoNums('hello',undefined)).to.be.eq(`Both these values must be a number`);
-  })
+  });
+
+  it('should be able to handle two 0\'s', () => {
+    const result = addTwoNums(0,0);
+    expect(result).to.be.eq(0);
+  });
+
+  it('should be able to handle an undefined value and another number', () => {
+    const result = addTwoNums(undefined,0);
+    expect(result).to.be.eq(0);
+  });
+
+  it('should be able to handle two undefined values as parameters', () => {
+    const result = addTwoNums(undefined,undefined);
+    expect(result).to.be.eq(0);
+  });
+
+  it('should be able to handle an undefined value and a null value as parameters', () => {
+    const result = addTwoNums(null,undefined);
+    expect(result).to.be.eq('Both these values must be a number');
+  });
+
+  it('should be able to handle invalid values such as a string as parameters', () => {
+    const result = addTwoNums('hello',undefined);
+    expect(result).to.be.eq('Both these values must be a number');
+  });
+
 })
