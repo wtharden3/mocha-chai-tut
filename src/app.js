@@ -13,6 +13,11 @@ const getKilograms = (pounds) => {
   return pounds.map(pound => (pound/2.2046).toFixed(2));
 }
 
+const addTwoNums = (num1, num2) => {
+  return num1 + num2;
+}
+
 module.exports = {
-  getKilograms
+  getKilograms,
+  addTwoNums
 }
