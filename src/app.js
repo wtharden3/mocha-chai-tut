@@ -15,7 +15,13 @@ const getKilograms = (pounds) => {
 }
 
 const addTwoNums = (num1, num2) => {
-  return num1 + num2;
+  if (num1 === undefined) num1 = 0;
+  if (num2 === undefined) num2 = 0;
+  if((Number.isInteger(num1)) || (Number.isInteger(num2))){
+    return num1 + num2;
+  } else {
+    return `Both these values must be a number`;
+  }  
 }
 
 module.exports = {

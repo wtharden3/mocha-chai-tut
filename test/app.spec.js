@@ -14,5 +14,12 @@ describe('addTwoNums', () => { //arrow functions are discouraged - read Mocha do
     const result = addTwoNums(2,2);
     // assert.equal(result, 4); //the expected are integers but the actual are strings
     expect(result).to.be.eq(4);
+    expect(addTwoNums(0,0)).to.be.eq(0);
+    expect(addTwoNums(undefined,0)).to.be.eq(0);
+    expect(addTwoNums(undefined,undefined)).to.be.eq(0);
+    expect(addTwoNums(null,undefined)).to.be.eq(0);
+    
+    // not working
+    // expect(addTwoNums('hello',undefined)).to.be.eq(`Both these values must be a number`);
   })
 })
