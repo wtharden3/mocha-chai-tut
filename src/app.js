@@ -10,7 +10,8 @@
 //[100, 120, 150, 50] => [45.36, 54.43, 68.04, 22.68]
 
 const getKilograms = (pounds) => {
-  return pounds.map(pound => (pound/2.2046).toFixed(2));
+  //pounds.map(pound => (pound/2.2046).toFixed(2)) parseFloat
+  return pounds.map(pound => parseFloat((pound/2.2046).toFixed(2)));
 }
 
 const addTwoNums = (num1, num2) => {
