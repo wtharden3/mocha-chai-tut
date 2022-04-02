@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha test",
-    "coverage": "nyc npm run test"
+    "coverage2": "nyc npm run test",
+    "coverage": "nyc --reporter=html npm run test"
   },
   "repository": {
     "type": "git",
