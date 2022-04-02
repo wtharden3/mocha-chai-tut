@@ -6,6 +6,10 @@ run ```npm install``` in your terminal to install dev dependencies
 
 in order to run test statments run ``` npm run test ``` at the root folder
 
+for nyc run ``` npm run coverage ``` and you will get a visual in terminal/command line of your test
+
+![npm run coverage result](/public/assets/runCoverageScript.png)
+
 ## Dev Dependences
 * [Mocha](https://mochajs.org/)
 * [Chai](https://www.chaijs.com/)
